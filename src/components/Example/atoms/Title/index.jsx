@@ -6,17 +6,17 @@ import FONTFAMILY from "../../../../variables/font_family";
 import BREAKPOINT from "../../../../variables/breakpoint";
 
 const Title = () => {
-  const StyledText = styled.div`
-    color: ${COLOR.WHITE};
-    ${TEXT.M};
-    font-family: ${FONTFAMILY.ROBOTO};
-
-    @media screen and (min-width: 768px) {
-      ${TEXT.L};
-    }
-  `;
-
   return <StyledText>SIMPLE TODO APP</StyledText>;
 };
 
 export default Title;
+
+const StyledText = styled.div`
+  color: ${COLOR.WHITE};
+  ${TEXT.M};
+  font-family: ${FONTFAMILY.ROBOTO};
+
+  @media screen and (min-width: ${BREAKPOINT.MEDIUM}) {
+    ${TEXT.L};
+  }
+`;
