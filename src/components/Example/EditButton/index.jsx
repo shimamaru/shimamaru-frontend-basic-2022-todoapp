@@ -16,6 +16,7 @@ export default SampleButton;
 const StyledButton = styled.button`
   padding: 0;
   border: none;
+  height: 24px;
 `;
 
 const StyledIcon = styled.img`
