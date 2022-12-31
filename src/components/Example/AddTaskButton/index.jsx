@@ -23,6 +23,7 @@ const StyledAddTaskButton = styled.div`
 
   &:hover {
     background-color: #c5d8d2;
+    cursor: pointer;
   }
 `;
 
