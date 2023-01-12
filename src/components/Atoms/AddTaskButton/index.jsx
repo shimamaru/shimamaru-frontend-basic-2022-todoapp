@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import plus from "../../../assets/svg/plus.svg";
 import COLOR from "../../../variables/color";
+import TEXT from "../../../variables/texts";
 
 const AddTaskButton = ({ onClick }) => {
   return (
@@ -32,9 +33,4 @@ const PlusButton = styled.img``;
 const ButtonText = styled.p`
   color: ${COLOR.GREEN};
   margin: 0;
-`;
-
-const StyledText = styled.div`
-  color: ${COLOR.WHITE};
-  ${TEXTS.S}
 `;

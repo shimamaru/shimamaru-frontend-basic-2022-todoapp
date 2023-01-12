@@ -14,3 +14,9 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
+
+Default.args = {
+  onClick: () => {
+    console.log("clicked");
+  },
+};
