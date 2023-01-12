@@ -13,12 +13,14 @@ const SampleButton = ({ onClick }) => {
 };
 
 export default SampleButton;
+
 const StyledShadow = styled.div`
   position: absolute;
   height: 24px;
   width: 24px;
   border-radius: 50%;
   top: 0px;
+  cursor: pointer;
 `;
 
 const StyledButton = styled.button`
