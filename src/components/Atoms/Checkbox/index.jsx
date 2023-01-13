@@ -13,8 +13,7 @@ const Checkbox = ({ onClick }) => {
 export default Checkbox;
 
 const StyledCheckMarkImg = styled.img`
-  width: 13px;
-  height: 10px;
+  height: 18px;
   visibility: hidden;
 `;
 
@@ -26,6 +25,7 @@ const StyleCheckbox = styled.button`
   padding: 0;
   border-radius: 2px;
   border: 1px solid ${COLOR.LIGHT_GRAY};
+  background-color: transparent;
 
   &:hover {
     ${StyledCheckMarkImg} {
