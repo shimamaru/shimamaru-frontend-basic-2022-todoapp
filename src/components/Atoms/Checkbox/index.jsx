@@ -24,7 +24,7 @@ const StyleCheckbox = styled.button`
   width: 20px;
   padding: 0;
   border-radius: 2px;
-  border: 1px solid ${COLOR.LIGHT_GRAY};
+  border: 2px solid ${COLOR.LIGHT_GRAY};
   background-color: transparent;
 
   &:hover {
