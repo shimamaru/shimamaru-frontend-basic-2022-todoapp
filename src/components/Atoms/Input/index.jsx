@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useRef } from "react";
 import styled from "styled-components";
 import COLOR from "../../../variables/color";
+import TEXT from "../../../variables/texts";
 
 const Input = (props) => {
   const InputRef = useRef();
@@ -18,14 +19,10 @@ const Input = (props) => {
       onEditComplete();
     }
   }
-  console.log(Input);
 
   return (
-    <div>
       <SInput defaultValue={props.defaultValue} ref={InputRef} onKeyPress={handleKeyPress} />
-    </div>
   )};
-
 
 export default Input;
 
@@ -33,8 +30,11 @@ const SInput = styled.input`
   background-color: ${COLOR.BLACK};
   border: none;
   padding: 0;
-  width: 232px;
   height: 20px;
+  border-radius: 2px;
+  color: ${COLOR.LIGHT_GRAY};
+  ${TEXT.S};
+
 
   :focus{
     outline: transparent;
