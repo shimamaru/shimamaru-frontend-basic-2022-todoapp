@@ -5,24 +5,30 @@ import styled from "styled-components";
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
 
-const Input = (props) => {
-  const InputRef = useRef();
-  useEffect(() => {
-    InputRef.current.focus()
-  }, []);
+const Input = ({ onEditComplete, defaultValue = "" }) => {
+  const InputRef = useRef(null);
 
-  const onEditComplete = () => {
-  }
-
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
       onEditComplete();
     }
-  }
+  };
+
+  useEffect(() => {
+    InputRef.current.focus();
+  }, []);
 
   return (
-      <SInput defaultValue={props.defaultValue} ref={InputRef} onKeyPress={handleKeyPress} />
-  )};
+    <div>
+      <SInput
+        defaultValue={defaultValue}
+        ref={InputRef}
+        onKeyPress={handleKeyPress}
+        onBlur={() => onEditComplete(InputRef.current.value)}
+      />
+    </div>
+  );
+};
 
 export default Input;
 
@@ -35,8 +41,7 @@ const SInput = styled.input`
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S};
 
-
-  :focus{
+  :focus {
     outline: transparent;
   }
 `;
