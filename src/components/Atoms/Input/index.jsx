@@ -10,6 +10,7 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
 
   useEffect(() => {
     InputRef.current.focus();
+    InputRef.current.value = defaultValue;
   }, []);
 
   const handleKeyPress = (e) => {
@@ -21,8 +22,8 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
   return (
     <SInput
       type="text"
-      defaultValue={defaultValue}
       ref={InputRef}
+      defaultValue={defaultValue}
       onKeyPress={handleKeyPress}
       onBlur={() => onEditComplete(InputRef.current.value)}
     />
