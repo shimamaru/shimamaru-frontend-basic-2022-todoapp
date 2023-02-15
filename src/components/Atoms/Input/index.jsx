@@ -8,25 +8,24 @@ import TEXT from "../../../variables/texts";
 const Input = ({ onEditComplete, defaultValue = "" }) => {
   const InputRef = useRef(null);
 
-  const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
-      onEditComplete();
-    }
-  };
-
   useEffect(() => {
     InputRef.current.focus();
   }, []);
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      onEditComplete(InputRef.current.value);
+    }
+  };
+
   return (
-    <div>
-      <SInput
-        defaultValue={defaultValue}
-        ref={InputRef}
-        onKeyPress={handleKeyPress}
-        onBlur={() => onEditComplete(InputRef.current.value)}
-      />
-    </div>
+    <SInput
+      type="text"
+      defaultValue={defaultValue}
+      ref={InputRef}
+      onKeyPress={handleKeyPress}
+      onBlur={() => onEditComplete(InputRef.current.value)}
+    />
   );
 };
 
@@ -37,6 +36,8 @@ const SInput = styled.input`
   border: none;
   padding: 0;
   height: 20px;
+  padding: 3px;
+  padding-left: 4px;
   border-radius: 2px;
   color: ${COLOR.LIGHT_GRAY};
   ${TEXT.S};
