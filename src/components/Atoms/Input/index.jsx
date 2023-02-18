@@ -20,7 +20,7 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
   };
 
   return (
-    <SInput
+    <StyledInput
       type="text"
       ref={InputRef}
       defaultValue={defaultValue}
@@ -32,10 +32,11 @@ const Input = ({ onEditComplete, defaultValue = "" }) => {
 
 export default Input;
 
-const SInput = styled.input`
+const StyledInput = styled.input`
   background-color: ${COLOR.BLACK};
   border: none;
   padding: 0;
+  width: 100%;
   height: 20px;
   padding: 3px;
   padding-left: 4px;
