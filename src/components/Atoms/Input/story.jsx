@@ -1,9 +1,9 @@
 import React from "react";
-import Component from "./index";
+import Component from "./index.jsx";
 
 export default {
   component: Component,
-  title: "Atoms/EditButton",
+  title: "Input",
   parameters: {
     backgrounds: {
       default: "dark",
@@ -14,6 +14,10 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
+
 Default.args = {
-  onClick: () => console.log("clicked"),
+  defaultValue: "",
+  onEditComplete: (value) => {
+    console.log(value);
+  },
 };
