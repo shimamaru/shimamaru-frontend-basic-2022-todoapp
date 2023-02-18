@@ -14,3 +14,11 @@ export default {
 const Template = (args) => <Component {...args} />;
 
 export const Default = Template.bind({});
+Default.args = {
+  onTaskChange: (value) => {
+    console.log(value);
+  },
+  onTaskComplete: () => {
+    console.log("hoge");
+  },
+};

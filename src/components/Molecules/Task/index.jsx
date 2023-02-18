@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Checkbox from "../../Atoms/Checkbox";
 import EditButton from "../../Atoms/EditButton";
-import SInput from "../../Atoms/Input";
+import StyledInput from "../../Atoms/Input";
 
 const Task = ({
   onTaskChange,
@@ -27,7 +27,10 @@ const Task = ({
         <Checkbox onClick={onTaskComplete} />
       </StyledCheckboxWrapper>
       {isEditing ? (
-        <SInput onEditComplete={handleEditComplete} defaultValue={taskName} />
+        <StyledInput
+          onEditComplete={handleEditComplete}
+          defaultValue={taskName}
+        />
       ) : (
         <StyledNameAndButtonWrapper>
           <StyledTaskName>{taskName}</StyledTaskName>
@@ -51,7 +54,7 @@ const StyledCheckboxWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
-  /* margin-left: 170px; */
+  margin-left: 170px;
 `;
 
 const StyledTaskName = styled.div``;
