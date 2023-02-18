@@ -46,6 +46,7 @@ const Task = ({
 const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 const StyledCheckboxWrapper = styled.div`
@@ -54,7 +55,8 @@ const StyledCheckboxWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
-  margin-left: 170px;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 const StyledTaskName = styled.div``;
