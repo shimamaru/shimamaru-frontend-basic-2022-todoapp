@@ -4,7 +4,7 @@ import Checkbox from "../../Atoms/Checkbox";
 import EditButton from "../../Atoms/EditButton";
 import SInput from "../../Atoms/Input";
 
-const Title = ({
+const Task = ({
   onTaskChange,
   onTaskComplete,
   taskName = "",
@@ -12,8 +12,9 @@ const Title = ({
 }) => {
   const [isEditing, setIsEditing] = useState(defaultIsEditing);
 
-  const handleEditComplete = () => {
+  const handleEditComplete = (editedTaskName) => {
     setIsEditing(false);
+    onTaskChange(editedTaskName);
   };
 
   const handleEditButtonClick = () => {
@@ -50,10 +51,11 @@ const StyledCheckboxWrapper = styled.div`
 
 const StyledNameAndButtonWrapper = styled.div`
   display: flex;
-  margin-left: 170px;
+  /* margin-left: 170px; */
 `;
 
 const StyledTaskName = styled.div``;
 
 const StyledEditButtonWrapper = styled.div``;
-export default Title;
+
+export default Task;
