@@ -13,10 +13,13 @@ const MainPage = () => {
 };
 
 const StyledWrapper = styled.div`
-  text-align: center;
+  margin: 0 auto;
+  align-items: center;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   margin-top: 20px;
 `;
+
 export default MainPage;
