@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Checkbox from "../../Atoms/Checkbox";
 import EditButton from "../../Atoms/EditButton";
 import StyledInput from "../../Atoms/Input";
+import COLOR from "../../../variables/color";
 
 const Task = ({
   onTaskChange,
@@ -44,6 +45,7 @@ const Task = ({
 };
 
 const StyledWrapper = styled.div`
+  color: ${COLOR.LIGHT_GRAY};
   display: flex;
   align-items: center;
   width: 100%;
