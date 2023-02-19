@@ -56,7 +56,6 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   row-gap: 9px;
   width: 100%;
-  max-width: 500pxs;
 `;
 
 const StyledTaskList = styled.ul`
