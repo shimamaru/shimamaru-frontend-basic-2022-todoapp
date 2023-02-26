@@ -14,6 +14,7 @@ const MainPage = () => {
 };
 
 const StyledWrapper = styled.div`
+  margin: 0 auto;
   align-items: center;
   max-width: 500px;
   display: flex;
