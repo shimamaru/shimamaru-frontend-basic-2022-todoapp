@@ -11,7 +11,7 @@ export const AlertHandlerProvider = ({ children }) => {
   });
 
   const showAlert = (message) => {
-    setAlertState({ visible: true, message });
+    setAlertState({ visible: true, message: message });
   };
 
   const closeAlert = () => {
