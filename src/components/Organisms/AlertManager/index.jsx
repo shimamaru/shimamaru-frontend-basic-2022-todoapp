@@ -11,7 +11,7 @@ const AlertManager = () => {
     if (visible) {
       const timer = setTimeout(() => {
         closeAlert();
-      }, 500000);
+      }, 5000);
       return () => {
         clearTimeout(timer);
       };
